@@ -37,25 +37,91 @@ const mockData = [
     "variant": "primary",
     "size": "md",
     "fullWidth": false
+  }, {
+    "type": "header",
+    "content": "Build something modern",
+    "size": "6xl",
+    "weight": "black",
+    "color": "text-blue-500",
+    "align": "left",
+    "tracking": "tight",
+    "pt": 4,
+    "pb": 8
   },
-  // {
-  //   "type": "list",
-  //   "items": ["Install dependencies", "Configure environment", "Run the project"],
-  //   "variant": "dot",
-  //   "size": "lg"
-  // },
-  // {
-  //   "type": "contact",
-  //   "phone": "+381 60 123 456",
-  //   "email": "team@startup.com",
-  //   "address": "Belgrade, Serbia",
-  //   "size": "base",
-  //   "variant": "glass"
-  // }, 
-  // {
-  //   type: "location",
-  //   googleUrl: "https://www.google.com/maps/embed?pb=...",
-  // }
+  {
+
+    "type": "paragraph",
+    "content": "Modern web applications today rely heavily on component-based architecture, which allows developers to build reusable, scalable, and maintainable user interfaces.",
+    "size": "lg",
+    "leading": "normal",
+    "color": "text-zinc-300",
+    "maxWidth": "",
+    "pb": "4",
+  },
+  {
+    "type": "link",
+    "content": "Get Started",
+    "href": "https://instagram.com",
+    "variant": "primary",
+    "size": "md",
+    "fullWidth": false
+  }, {
+    "type": "header",
+    "content": "Build something modern",
+    "size": "6xl",
+    "weight": "black",
+    "color": "text-blue-500",
+    "align": "left",
+    "tracking": "tight",
+    "pt": 4,
+    "pb": 8
+  },
+  {
+
+    "type": "paragraph",
+    "content": "Modern web applications today rely heavily on component-based architecture, which allows developers to build reusable, scalable, and maintainable user interfaces.",
+    "size": "lg",
+    "leading": "normal",
+    "color": "text-zinc-300",
+    "maxWidth": "",
+    "pb": "4",
+  },
+  {
+    "type": "link",
+    "content": "Get Started",
+    "href": "https://instagram.com",
+    "variant": "primary",
+    "size": "md",
+    "fullWidth": false
+  }, {
+    "type": "header",
+    "content": "Build something modern",
+    "size": "6xl",
+    "weight": "black",
+    "color": "text-blue-500",
+    "align": "left",
+    "tracking": "tight",
+    "pt": 4,
+    "pb": 8
+  },
+  {
+
+    "type": "paragraph",
+    "content": "Modern web applications today rely heavily on component-based architecture, which allows developers to build reusable, scalable, and maintainable user interfaces.",
+    "size": "lg",
+    "leading": "normal",
+    "color": "text-zinc-300",
+    "maxWidth": "",
+    "pb": "4",
+  },
+  {
+    "type": "link",
+    "content": "Get Started",
+    "href": "https://instagram.com",
+    "variant": "primary",
+    "size": "md",
+    "fullWidth": false
+  },
 ];
 
 
@@ -82,7 +148,7 @@ export default async function Page({
         className="
         w-full max-w-2xl
         mx-auto 
-        sm:py-2
+        md:py-2
       "
       >
         <ComponentRenderer theme="dark" components={mockData} />

@@ -1,3 +1,4 @@
+import AnimatedWrapper from "./AnimatedWrapper";
 import { registry } from "./registry";
 
 type Props = {
@@ -13,8 +14,8 @@ export default function ComponentRenderer({
 }: Props) {
   const pageThemeClass =
     theme === "dark"
-      ? "bg-gradient-to-b from-zinc-800 to-zinc-950"
-      : "bg-gradient-to-b from-zinc-50 to-zinc-100";
+      ? "bg-gradient-to-b sm:rounded-2xl from-zinc-800 to-zinc-950"
+      : "bg-gradient-to-b sm:rounded-2xl from-zinc-50 to-zinc-100";
 
   const containerClass = insideBlock
     ? "flex flex-col gap-4 px-3 py-3 sm:px-4 sm:py-4"
@@ -40,7 +41,9 @@ export default function ComponentRenderer({
           const Component = registry[comp.type];
           if (!Component) return null;
 
-          return <Component key={i} component={comp} />;
+          return <AnimatedWrapper key={i} delay={i * 50}>
+            <Component component={comp} />
+          </AnimatedWrapper>
         })}
       </div>
     </div>
