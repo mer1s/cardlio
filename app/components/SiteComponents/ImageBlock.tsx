@@ -34,7 +34,7 @@ export default function ImageBlock({ component }: ImageBlockProps) {
     path,
     alt = "",
     aspectRatio = "video",
-    rounded = "2xl",
+    rounded = "xl",
     border = true,
     overlay = "gradient",
     objectFit = "cover",
@@ -64,7 +64,7 @@ export default function ImageBlock({ component }: ImageBlockProps) {
       )}
 
       {overlay === "gradient" && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-top from-black/50 to-transparent" />
       )}
     </div>
   );

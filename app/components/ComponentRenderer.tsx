@@ -14,11 +14,11 @@ export default function ComponentRenderer({
 }: Props) {
   const pageThemeClass =
     theme === "dark"
-      ? "bg-gradient-to-b sm:rounded-2xl from-zinc-800 to-zinc-950"
+      ? "bg-gradient-to-b sm:rounded-2xl from-zinc-900 to-zinc-950"
       : "bg-gradient-to-b sm:rounded-2xl from-zinc-50 to-zinc-100";
 
   const containerClass = insideBlock
-    ? "flex flex-col gap-4 px-3 py-3 sm:px-4 sm:py-4"
+    ? "flex flex-col px-2 py-2 sm:px-4 sm:py-4"
     : `min-h-screen flex justify-center ${pageThemeClass}`;
 
   if (insideBlock) {
@@ -33,7 +33,7 @@ export default function ComponentRenderer({
       </div>
     );
   }
-
+console.log(components)
   return (
     <div className={containerClass}>
       <div className="w-full max-w-3xl px-6 py-6 flex flex-col gap-2">
@@ -41,7 +41,7 @@ export default function ComponentRenderer({
           const Component = registry[comp.type];
           if (!Component) return null;
 
-          return <AnimatedWrapper key={i} delay={i * 50}>
+          return <AnimatedWrapper key={i} delay={i * 25}>
             <Component component={comp} />
           </AnimatedWrapper>
         })}

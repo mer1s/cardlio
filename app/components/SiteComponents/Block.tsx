@@ -18,7 +18,7 @@ export default function Block({ component }: any) {
   };
 
   const inner =
-    "relative overflow-hidden rounded-2xl bg-zinc-900/80 backdrop-blur-xl border border-white/5 transition-all duration-300 group-hover:bg-zinc-900/90";
+    "relative overflow-hidden rounded-2xl bg-zinc-900/60 backdrop-blur-md border border-white/5 transition-all duration-300 group-hover:bg-zinc-900/80";
 
   return (
     <div className={`${base} ${variants[variant]}`}>
@@ -27,7 +27,7 @@ export default function Block({ component }: any) {
 
       {/* Content */}
       <div className={inner}>
-        <ComponentRenderer components={component.children} />
+        <ComponentRenderer insideBlock={true} components={component.items} />
       </div>
     </div>
   );
