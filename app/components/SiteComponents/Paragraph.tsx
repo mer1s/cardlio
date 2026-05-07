@@ -28,7 +28,7 @@ const sizeMap = {
 };
 
 const weightMap = {
-  light: "font-light",
+  light: "font-thin",
   normal: "font-normal",
   medium: "font-medium",
   semibold: "font-semibold",

@@ -6,6 +6,8 @@ import Paragraph from "./SiteComponents/Paragraph";
 import Location from "./SiteComponents/Location";
 import Block from "./SiteComponents/Block";
 import LinkComponent from "./SiteComponents/Link";
+import Separator from "./SiteComponents/Separator";
+import Grid from "./SiteComponents/Grid";
 
 export const registry: Record<string, React.FC<{ component: any }>> = {
   header: Header,
@@ -15,5 +17,7 @@ export const registry: Record<string, React.FC<{ component: any }>> = {
   contact: Contact,
   location: Location,
   block: Block,
-  link: LinkComponent
+  link: LinkComponent,
+  separator: Separator,
+  grid: Grid
 };
