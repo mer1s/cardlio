@@ -16,7 +16,7 @@ export async function GET(req: Request) {
     .from("sites")
     .select("name, slug")
     .ilike("name", `%${query}%`)
-    .limit(10);
+    .limit(50);
 
   if (error) {
     return NextResponse.json(
