@@ -1,5 +1,6 @@
 import { supabase } from "@/lib/supabase";
 import ComponentRenderer from "../components/ComponentRenderer";
+import NotFound from "../components/NotFound";
 export const dynamic = "force-dynamic"
 
 type Site = {
@@ -25,7 +26,7 @@ export default async function Page({
   console.log(data, error)
 
   if (!data || error) {
-    return <div className="text-zinc-800 text-center py-5 my-5">Not found</div>
+    return <NotFound />
   }
   const site = data as Site
   console.log(site)
