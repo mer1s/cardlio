@@ -1,72 +1,34 @@
 import Link from "next/link";
+import { getPaddingClasses } from "@/lib/getPaddingClasses";
 
-type ButtonLinkProps = {
-  component: {
-    content: string;
-    href: string;
-
-    size?: "sm" | "md" | "lg";
-    variant?: "primary" | "secondary" | "ghost";
-
-    fullWidth?: boolean;
-    external?: boolean;
-  };
-};
-
-const sizeMap = {
-  sm: "px-3 py-1.5 text-sm",
-  md: "px-4 py-2 text-base",
-  lg: "px-6 py-3 text-lg",
-};
-
-const variantMap = {
+const variantMap: any = {
   primary:
-    "bg-blue-600 text-white hover:bg-blue-500 shadow-sm",
+    "bg-white text-black hover:opacity-90",
+
   secondary:
-    "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700",
-  ghost:
-    "bg-transparent text-blue-400 hover:bg-blue-500/10",
+    "bg-zinc-900 text-white border border-white/10 hover:bg-zinc-800",
 };
 
-export default function LinkComponent({ component }: ButtonLinkProps) {
+export default function ButtonLink({ component }: any) {
   const {
     content,
     href,
-    size = "md",
     variant = "primary",
-    fullWidth = true,
-    external = false,
+    fullWidth = false,
   } = component;
 
-  const classes = [
-    "inline-flex items-center justify-center rounded-xl font-medium",
-    "transition-all duration-200",
-    "active:scale-[0.98]",
-    sizeMap[size],
-    variantMap[variant],
-    fullWidth ? "w-full" : "",
-  ].join(" ");
-
-  const inner = <span>{content}</span>;
-
-  if (external) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classes}
-      >
-        {inner}
-      </a>
-    );
-  }
-
   return (
-    <section>
-      <Link href={href} className={classes}>
-        {inner}
+    <div className={getPaddingClasses(component)}>
+      <Link
+        href={href}
+        className={[
+          "inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium transition-all duration-200",
+          variantMap[variant],
+          fullWidth ? "w-full" : "",
+        ].join(" ")}
+      >
+        {content}
       </Link>
-    </section>
+    </div>
   );
 }

@@ -1,21 +1,21 @@
 import { supabase } from "@/lib/supabase";
 import ComponentRenderer from "../components/ComponentRenderer";
-import NotFound from "../components/NotFound";
-export const dynamic = "force-dynamic"
+
+export const dynamic = "force-dynamic";
 
 type Site = {
-  id: string
-  slug: string,
-  data: any[],
-  theme: string
-}
+  id: string;
+  slug: string;
+  data: any[];
+  theme: string;
+};
 
 export default async function Page({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params
+  const { slug } = await params;
 
   const { data, error } = await supabase
     .from("sites")
@@ -23,25 +23,69 @@ export default async function Page({
     .eq("slug", slug)
     .single();
 
-  console.log(data, error)
-
   if (!data || error) {
-    return <NotFound />
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center text-zinc-500">
+        Not found
+      </div>
+    );
   }
-  const site = data as Site
-  console.log(site)
+
+  const site = data as Site;
 
   return (
-    <div>
-      <main
+    <div className="relative min-h-screen overflow-hidden bg-black">
+      {/* Ambient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-900 via-black to-black" />
+
+      {/* Glow effects */}
+      <div
         className="
-        w-full max-w-2xl
-        mx-auto 
-        md:py-2
-      "
-      >
-        <ComponentRenderer theme="dark" components={site.data} />
-      </main>
+          absolute
+          top-[-150px]
+          left-1/2
+          h-[500px]
+          w-[500px]
+          -translate-x-1/2
+          rounded-full
+          bg-blue-500/10
+          blur-3xl
+        "
+      />
+
+      <div
+        className="
+          absolute
+          bottom-[-200px]
+          right-[-100px]
+          h-[400px]
+          w-[400px]
+          rounded-full
+          bg-indigo-500/10
+          blur-3xl
+        "
+      />
+
+      {/* Centered mobile canvas */}
+      <div className="relative z-10 flex justify-center">
+        <main
+          className="
+            w-full
+            max-w-md
+            min-h-screen
+            bg-zinc-950/90
+            backdrop-blur-xl
+            border-x
+            border-white/5
+            shadow-[0_0_60px_rgba(0,0,0,0.6)]
+          "
+        >
+          <ComponentRenderer
+            theme={site.theme || "dark"}
+            components={site.data}
+          />
+        </main>
+      </div>
     </div>
-  )
+  );
 }
