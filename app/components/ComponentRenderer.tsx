@@ -23,7 +23,11 @@ export default function ComponentRenderer({
           : "bg-white text-black",
       ].join(" ")}
     >
-      <div className="p-3 border-b border-b-zinc-300 mb-4 font-medium">{name}</div>
+      {name && (
+        <div className="p-3 border-b border-b-zinc-300 mb-4 font-medium">
+          {name}
+        </div>
+      )}
       {components.map((comp, i) => {
         const Component = registry[comp.type];
         if (!Component) return null;

@@ -6,6 +6,7 @@ export default function Block({ component }: any) {
       <ComponentRenderer
         insideBlock={true}
         components={component.items}
+        name=""
       />
     </div>
   );
