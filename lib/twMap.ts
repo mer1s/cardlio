@@ -21,21 +21,160 @@ export const twMap: Record<string, string> = {
   "justify-end": "justify-end",
 
   /* =====================
+     SPACING
+  ===================== */
+  "p-0": "p-0",
+  "p-2": "p-2",
+  "p-4": "p-4",
+  "p-6": "p-6",
+
+  "px-2": "px-2",
+  "px-3": "px-3",
+  "px-4": "px-4",
+  "px-6": "px-6",
+
+  "py-1": "py-1",
+  "py-2": "py-2",
+  "py-4": "py-4",
+
+  "m-0": "m-0",
+  "m-2": "m-2",
+  "m-4": "m-4",
+
+  "mx-auto": "mx-auto",
+  "my-2": "my-2",
+  "my-3": "my-3",
+
+  "mr-auto": "mr-auto",
+  "ml-3": "ml-3",
+
+  "gap": "gap-2",
+  "gap-2": "gap-2",
+  "gap-4": "gap-4",
+  "gap-6": "gap-6",
+
+  /* =====================
+     TYPOGRAPHY
+  ===================== */
+  "text-xs": "text-xs",
+  "text-sm": "text-sm",
+  "text-base": "text-base",
+  "text-lg": "text-lg",
+  "text-xl": "text-xl",
+  "text-2xl": "text-2xl",
+  "text-3xl": "text-3xl",
+  "text-4xl": "text-4xl",
+  "text-5xl": "text-5xl",
+
+  "font-light": "font-light",
+  "font-normal": "font-normal",
+  "font-medium": "font-medium",
+  "font-semibold": "font-semibold",
+  "font-bold": "font-bold",
+
+  "text-left": "text-left",
+  "text-center": "text-center",
+  "text-right": "text-right",
+
+  "text-zinc-200": "text-zinc-200",
+  "text-zinc-300": "text-zinc-300",
+  "text-zinc-400": "text-zinc-400",
+  "text-zinc-500": "text-zinc-500",
+  "text-zinc-600": "text-zinc-600",
+  "text-zinc-700": "text-zinc-700",
+  "text-zinc-900": "text-zinc-900",
+
+  /* =====================
+     BACKGROUND
+  ===================== */
+  "bg-white": "bg-white",
+  "bg-black": "bg-black",
+  "bg-zinc-50": "bg-zinc-50",
+  "bg-zinc-100": "bg-zinc-100",
+  "bg-zinc-200": "bg-zinc-200",
+  "bg-zinc-300": "bg-zinc-300",
+  "bg-zinc-400": "bg-zinc-400",
+  "bg-zinc-500": "bg-zinc-500",
+  "bg-zinc-600": "bg-zinc-600",
+  "bg-zinc-700": "bg-zinc-700",
+  "bg-zinc-800": "bg-zinc-800",
+  "bg-zinc-900": "bg-zinc-900",
+
+  /* =====================
+     BORDER + RADIUS
+  ===================== */
+  "border": "border",
+  "border-0": "border-0",
+  "border-zinc-200": "border-zinc-200",
+  "border-zinc-300": "border-zinc-300",
+
+  "rounded-sm": "rounded-sm",
+  "rounded": "rounded",
+  "rounded-md": "rounded-md",
+  "rounded-lg": "rounded-lg",
+  "rounded-xl": "rounded-xl",
+  "rounded-2xl": "rounded-2xl",
+  "rounded-full": "rounded-full",
+
+  /* =====================
+     SHADOW
+  ===================== */
+  "shadow": "shadow",
+  "shadow-sm": "shadow-sm",
+  "shadow-md": "shadow-md",
+  "shadow-lg": "shadow-lg",
+  "shadow-xl": "shadow-xl",
+  "shadow-none": "shadow-none",
+
+  /* =====================
+     WIDTH / HEIGHT
+  ===================== */
+  "w-full": "w-full",
+  "w-auto": "w-auto",
+  "h-full": "h-full",
+  "h-auto": "h-auto",
+
+  /* =====================
+     POSITION
+  ===================== */
+  "relative": "relative",
+  "absolute": "absolute",
+  "fixed": "fixed",
+  "sticky": "sticky",
+
+  /* =====================
+     INTERACTION
+  ===================== */
+  "cursor": "cursor-pointer",
+  "cursor-pointer": "cursor-pointer",
+  "select-none": "select-none",
+  "pointer-events-none": "pointer-events-none",
+  "pointer-events-auto": "pointer-events-auto",
+
+  /* =====================
+     EFFECTS
+  ===================== */
+  "opacity-0": "opacity-0",
+  "opacity-50": "opacity-50",
+  "opacity-100": "opacity-100",
+
+  "transition": "transition",
+  "duration-150": "duration-150",
+  "duration-200": "duration-200",
+  "duration-300": "duration-300",
+
+  /* =====================
      SPACING - PADDING
   ===================== */
 
   // p
-  "p-0": "p-0",
   "p-0.5": "p-0.5",
   "p-1": "p-1",
   "p-1.5": "p-1.5",
-  "p-2": "p-2",
   "p-2.5": "p-2.5",
   "p-3": "p-3",
   "p-3.5": "p-3.5",
-  "p-4": "p-4",
   "p-5": "p-5",
-  "p-6": "p-6",
   "p-7": "p-7",
   "p-8": "p-8",
   "p-9": "p-9",
@@ -54,13 +193,9 @@ export const twMap: Record<string, string> = {
   "px-0.5": "px-0.5",
   "px-1": "px-1",
   "px-1.5": "px-1.5",
-  "px-2": "px-2",
   "px-2.5": "px-2.5",
-  "px-3": "px-3",
   "px-3.5": "px-3.5",
-  "px-4": "px-4",
   "px-5": "px-5",
-  "px-6": "px-6",
   "px-7": "px-7",
   "px-8": "px-8",
   "px-9": "px-9",
@@ -77,13 +212,10 @@ export const twMap: Record<string, string> = {
   // py
   "py-0": "py-0",
   "py-0.5": "py-0.5",
-  "py-1": "py-1",
   "py-1.5": "py-1.5",
-  "py-2": "py-2",
   "py-2.5": "py-2.5",
   "py-3": "py-3",
   "py-3.5": "py-3.5",
-  "py-4": "py-4",
   "py-5": "py-5",
   "py-6": "py-6",
   "py-7": "py-7",
@@ -152,15 +284,12 @@ export const twMap: Record<string, string> = {
   ===================== */
 
   // m
-  "m-0": "m-0",
   "m-0.5": "m-0.5",
   "m-1": "m-1",
   "m-1.5": "m-1.5",
-  "m-2": "m-2",
   "m-2.5": "m-2.5",
   "m-3": "m-3",
   "m-3.5": "m-3.5",
-  "m-4": "m-4",
   "m-5": "m-5",
   "m-6": "m-6",
   "m-7": "m-7",
@@ -187,13 +316,10 @@ export const twMap: Record<string, string> = {
   "mx-8": "mx-8",
   "mx-10": "mx-10",
   "mx-12": "mx-12",
-  "mx-auto": "mx-auto",
 
   // my
   "my-0": "my-0",
   "my-1": "my-1",
-  "my-2": "my-2",
-  "my-3": "my-3",
   "my-4": "my-4",
   "my-5": "my-5",
   "my-6": "my-6",
@@ -224,7 +350,6 @@ export const twMap: Record<string, string> = {
   "mr-8": "mr-8",
   "mr-10": "mr-10",
   "mr-12": "mr-12",
-  "mr-auto": "mr-auto",
 
   // mb
   "mb-0": "mb-0",
@@ -242,7 +367,6 @@ export const twMap: Record<string, string> = {
   "ml-0": "ml-0",
   "ml-1": "ml-1",
   "ml-2": "ml-2",
-  "ml-3": "ml-3",
   "ml-4": "ml-4",
   "ml-5": "ml-5",
   "ml-6": "ml-6",
@@ -254,14 +378,10 @@ export const twMap: Record<string, string> = {
   /* =====================
      GAP
   ===================== */
-  "gap": "gap-2",
   "gap-0": "gap-0",
   "gap-1": "gap-1",
-  "gap-2": "gap-2",
   "gap-3": "gap-3",
-  "gap-4": "gap-4",
   "gap-5": "gap-5",
-  "gap-6": "gap-6",
 };
 
 export function resolveClasses(classList?: string[]) {
