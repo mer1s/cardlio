@@ -76,6 +76,9 @@ export const twMap: Record<string, string> = {
   "text-center": "text-center",
   "text-right": "text-right",
 
+  "text-zinc-200": "text-zinc-200",
+  "text-zinc-300": "text-zinc-300",
+  "text-zinc-400": "text-zinc-400",
   "text-zinc-500": "text-zinc-500",
   "text-zinc-600": "text-zinc-600",
   "text-zinc-700": "text-zinc-700",
@@ -88,6 +91,13 @@ export const twMap: Record<string, string> = {
   "bg-black": "bg-black",
   "bg-zinc-50": "bg-zinc-50",
   "bg-zinc-100": "bg-zinc-100",
+  "bg-zinc-200": "bg-zinc-200",
+  "bg-zinc-300": "bg-zinc-300",
+  "bg-zinc-400": "bg-zinc-400",
+  "bg-zinc-500": "bg-zinc-500",
+  "bg-zinc-600": "bg-zinc-600",
+  "bg-zinc-700": "bg-zinc-700",
+  "bg-zinc-800": "bg-zinc-800",
   "bg-zinc-900": "bg-zinc-900",
 
   /* =====================
