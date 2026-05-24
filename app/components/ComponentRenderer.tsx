@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { registry } from "./registry";
 
 type Props = {
   components: any[];
   insideBlock?: boolean;
   theme?: "light" | "dark";
-  name: string
+  name: string;
 };
 
 export default function ComponentRenderer({
@@ -24,13 +25,36 @@ export default function ComponentRenderer({
       ].join(" ")}
     >
       {name && (
-        <div className="p-3 border-b border-b-zinc-300 mb-4 font-medium">
-          {name}
+        <div
+          className={[
+            "sticky top-0 z-50",
+            "px-6 py-4 border-b mb-4 font-medium",
+            "flex items-center justify-between",
+            theme === "dark"
+              ? "bg-black border-b-zinc-800"
+              : "bg-white border-b-zinc-200",
+          ].join(" ")}
+        >
+          <span>{name}</span>
+
+          <Link
+            href="/"
+            className={[
+              "text-sm px-3 py-1 rounded-md border transition",
+              theme === "dark"
+                ? "border-zinc-700 hover:bg-zinc-900"
+                : "border-zinc-300 hover:bg-zinc-100",
+            ].join(" ")}
+          >
+            Back to Home
+          </Link>
         </div>
       )}
+
       {components.map((comp, i) => {
         const Component = registry[comp.type];
         if (!Component) return null;
+
         return <Component key={i} component={comp} />;
       })}
     </div>
