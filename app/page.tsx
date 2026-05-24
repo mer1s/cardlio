@@ -2,7 +2,7 @@ import SearchBox from "./components/SearchBox";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-white flex items-start pt-12 justify-center px-6">
+    <main className="min-h-screen bg-gradient-to-b border-none from-zinc-950 via-zinc-900 to-zinc-950 text-white flex items-start pt-12 justify-center px-6">
       <div className="w-full max-w-2xl space-y-10">
         
         {/* Header */}

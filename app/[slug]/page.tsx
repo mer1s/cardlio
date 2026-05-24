@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 type Site = {
   id: string;
+  name: string;
   slug: string;
   data: any[];
   theme: string;
@@ -75,14 +76,15 @@ export default async function Page({
             min-h-screen
             bg-zinc-950/90
             backdrop-blur-xl
-            border-x
+            border-0
             border-white/5
             shadow-[0_0_60px_rgba(0,0,0,0.6)]
           "
         >
           <ComponentRenderer
-            theme={site.theme || "dark"}
+            theme={(site.theme as "light" | "dark") || "dark"}
             components={site.data}
+            name={site.name}
           />
         </main>
       </div>

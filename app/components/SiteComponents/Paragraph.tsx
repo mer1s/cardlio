@@ -1,41 +1,16 @@
-import { getPaddingClasses } from "@/lib/getPaddingClasses";
+import { resolveClasses } from "@/lib/twMap";
 
-const sizeMap: any = {
-  sm: "text-sm",
-  md: "text-base",
-  lg: "text-lg",
+type ParagraphProps = {
+  component: {
+    content: string;
+    classList: string[];
+  };
 };
 
-const weightMap: any = {
-  light: "font-light",
-  normal: "font-normal",
-  medium: "font-medium",
-};
-
-export default function Paragraph({ component }: any) {
-  const {
-    content,
-    size = "md",
-    weight = "normal",
-    align = "left",
-    color = "text-zinc-400",
-  } = component;
-
+export default function Paragraph({ component }: ParagraphProps) {
+  const { content, classList } = component;
   return (
-    <p
-      className={[
-        sizeMap[size],
-        weightMap[weight],
-        color,
-        align === "center"
-          ? "text-center"
-          : align === "right"
-          ? "text-right"
-          : "text-left",
-        "leading-relaxed",
-        getPaddingClasses(component),
-      ].join(" ")}
-    >
+    <p className={resolveClasses(classList)}>
       {content}
     </p>
   );
