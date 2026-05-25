@@ -6,6 +6,8 @@ type Props = {
   insideBlock?: boolean;
   theme?: "light" | "dark";
   name: string;
+  colFlex: boolean,
+  flexGap: number
 };
 
 export default function ComponentRenderer({
@@ -13,16 +15,19 @@ export default function ComponentRenderer({
   name,
   insideBlock = false,
   theme = "dark",
+  colFlex = false,
+  flexGap = 0,
 }: Props) {
   return (
     <div
       className={[
-        "flex flex-col",
-        insideBlock ? "" : "min-h-screen",
-        theme === "dark"
+        "flex",
+        flexGap &&`gap-${flexGap}`,
+        insideBlock ? colFlex && "flex-col" : "min-h-screen flex-col",
+        !insideBlock ? theme === "dark"
           ? "bg-black text-white"
-          : "bg-white text-black",
-      ].join(" ")}
+          : "bg-white text-black" : ""
+      ].filter(Boolean).join(" ")}
     >
       {name && (
         <div

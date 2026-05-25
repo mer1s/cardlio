@@ -386,7 +386,93 @@ export const twMap: Record<string, string> = {
    //   ====================== 
    // POSITION
    // ==========================
-   "top-0": "top-0", "z-50": "z-50"
+   "top-0": "top-0", "z-50": "z-50",
+   
+  // borders
+  "border-b": "border-b",
+
+  // max width
+  "max-w-[64px]": "max-w-[64px]",
+
+  // arbitrary bg
+  "bg-white/[0.03]": "bg-white/[0.03]",
+
+  // backdrop
+  "backdrop-blur-xl": "backdrop-blur-xl",
+
+  // hover
+  "hover:opacity-90": "hover:opacity-90",
+  "hover:bg-zinc-800": "hover:bg-zinc-800",
+
+  // transition
+  "transition-all": "transition-all",
+
+  // width / height
+  "max-w-full": "max-w-full",
+  "min-h-screen": "min-h-screen",
+
+  // spacing
+  "gap-8": "gap-8",
+
+  // typography
+  "leading-none": "leading-none",
+  "tracking-tight": "tracking-tight",
+  "uppercase": "uppercase",
+
+  // flex
+  "flex-1": "flex-1",
+  "shrink-0": "shrink-0",
+
+  // overflow
+  "overflow-hidden": "overflow-hidden",
+
+  // z-index
+  "z-10": "z-10",
+  "z-20": "z-20",
+
+  // opacity
+  "opacity-75": "opacity-75",
+
+  // pointer
+  "cursor-default": "cursor-default",
+
+  // sizing
+  "w-screen": "w-screen",
+  "h-screen": "h-screen",
+
+  // display
+  "contents": "contents",
+
+  // flex
+  "flex-wrap": "flex-wrap",
+  "flex-nowrap": "flex-nowrap",
+
+  // alignment
+  "items-stretch": "items-stretch",
+  "justify-around": "justify-around",
+  "justify-evenly": "justify-evenly",
+
+  // text
+  "italic": "italic",
+  "underline": "underline",
+  "truncate": "truncate",
+
+  // radius
+  "rounded-3xl": "rounded-3xl",
+
+  // shadows
+  "shadow-2xl": "shadow-2xl",
+
+  // effects
+  "blur": "blur",
+  "blur-sm": "blur-sm",
+  "blur-md": "blur-md",
+
+  // positioning
+  "left-0": "left-0",
+  "right-0": "right-0",
+  "bottom-0": "bottom-0"
+
 };
 
 export function resolveClasses(classList?: string[]) {

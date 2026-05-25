@@ -1,15 +1,43 @@
-export default function List({ component }: any) {
+import { resolveClasses } from "@/lib/twMap";
+import { getPaddingClasses } from "@/lib/getPaddingClasses";
+
+type ListItem = {
+  content: string;
+  classList?: string[];
+};
+
+type ListProps = {
+  component: {
+    items: ListItem[];
+    classList?: string[];
+    itemClassList?: string[];
+    ordered?: boolean;
+  };
+};
+
+export default function List({ component }: ListProps) {
+  const {
+    items = [],
+    classList = [],
+    itemClassList = [],
+    ordered = false,
+  } = component;
+
+  const Tag = ordered ? "ol" : "ul";
+
   return (
-    <ul className="flex flex-col gap-3">
-      {component.items.map((item: string, i: number) => (
-        <li
-          key={i}
-          className="text-sm text-zinc-300 flex items-center gap-3"
-        >
-          <div className="h-1.5 w-1.5 rounded-full bg-white/70" />
-          {item}
-        </li>
-      ))}
-    </ul>
+      <Tag className={resolveClasses(classList)}>
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className={[
+              resolveClasses(itemClassList),
+              resolveClasses(item.classList),
+            ].join(" ")}
+          >
+            {item.content}
+          </li>
+        ))}
+      </Tag>
   );
 }

@@ -1,13 +1,23 @@
 import ComponentRenderer from "../ComponentRenderer";
+import { resolveClasses } from "@/lib/twMap";
 
 export default function Block({ component }: any) {
+  const {
+    colFlex = false,
+    flexGap = 0,
+    items = [],
+    classList = [],
+  } = component;
+
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-xl">
-      <ComponentRenderer
-        insideBlock={true}
-        components={component.items}
-        name=""
-      />
-    </div>
+      <div className={resolveClasses(classList)}>
+        <ComponentRenderer
+          insideBlock={true}
+          components={items}
+          name=""
+          colFlex = {colFlex}
+          flexGap = {flexGap}
+        />
+      </div>
   );
 }
