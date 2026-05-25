@@ -6,8 +6,8 @@ type Props = {
   insideBlock?: boolean;
   theme?: "light" | "dark";
   name: string;
-  colFlex: boolean,
-  flexGap: number
+  colFlex?: boolean,
+  flexGap?: number
 };
 
 export default function ComponentRenderer({
