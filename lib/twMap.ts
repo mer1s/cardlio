@@ -19,6 +19,10 @@ export const twMap: Record<string, string> = {
    "justify-between": "justify-between",
    "justify-start": "justify-start",
    "justify-end": "justify-end",
+   "align-center": "align-center",
+   "align-between": "align-between",
+   "align-start": "align-start",
+   "align-end": "align-end",
 
    /* =====================
       SPACING
@@ -471,8 +475,224 @@ export const twMap: Record<string, string> = {
   // positioning
   "left-0": "left-0",
   "right-0": "right-0",
-  "bottom-0": "bottom-0"
+  "bottom-0": "bottom-0",
 
+    /* =====================
+     WIDTH
+  ===================== */
+
+  "w-0": "w-0",
+  "w-px": "w-px",
+  "w-0.5": "w-0.5",
+  "w-1": "w-1",
+  "w-1.5": "w-1.5",
+  "w-2": "w-2",
+  "w-2.5": "w-2.5",
+  "w-3": "w-3",
+  "w-3.5": "w-3.5",
+  "w-4": "w-4",
+  "w-5": "w-5",
+  "w-6": "w-6",
+  "w-7": "w-7",
+  "w-8": "w-8",
+  "w-9": "w-9",
+  "w-10": "w-10",
+  "w-11": "w-11",
+  "w-12": "w-12",
+  "w-14": "w-14",
+  "w-16": "w-16",
+  "w-20": "w-20",
+  "w-24": "w-24",
+  "w-28": "w-28",
+  "w-32": "w-32",
+  "w-36": "w-36",
+  "w-40": "w-40",
+  "w-44": "w-44",
+  "w-48": "w-48",
+  "w-52": "w-52",
+  "w-56": "w-56",
+  "w-60": "w-60",
+  "w-64": "w-64",
+  "w-72": "w-72",
+  "w-80": "w-80",
+  "w-96": "w-96",
+
+  "w-min": "w-min",
+  "w-max": "w-max",
+  "w-fit": "w-fit",
+
+  /* =====================
+     MIN WIDTH
+  ===================== */
+
+  "min-w-0": "min-w-0",
+  "min-w-full": "min-w-full",
+  "min-w-max": "min-w-max",
+  "min-w-min": "min-w-min",
+  "min-w-fit": "min-w-fit",
+
+  /* =====================
+     MAX WIDTH
+  ===================== */
+
+  "max-w-none": "max-w-none",
+  "max-w-xs": "max-w-xs",
+  "max-w-sm": "max-w-sm",
+  "max-w-md": "max-w-md",
+  "max-w-lg": "max-w-lg",
+  "max-w-xl": "max-w-xl",
+  "max-w-2xl": "max-w-2xl",
+  "max-w-3xl": "max-w-3xl",
+  "max-w-4xl": "max-w-4xl",
+  "max-w-5xl": "max-w-5xl",
+  "max-w-6xl": "max-w-6xl",
+  "max-w-7xl": "max-w-7xl",
+  "max-w-fit": "max-w-fit",
+  "max-w-max": "max-w-max",
+  "max-w-min": "max-w-min",
+
+  /* =====================
+     HEIGHT
+  ===================== */
+
+  "h-0": "h-0",
+  "h-px": "h-px",
+  "h-0.5": "h-0.5",
+  "h-1": "h-1",
+  "h-1.5": "h-1.5",
+  "h-2": "h-2",
+  "h-2.5": "h-2.5",
+  "h-3": "h-3",
+  "h-3.5": "h-3.5",
+  "h-4": "h-4",
+  "h-5": "h-5",
+  "h-6": "h-6",
+  "h-7": "h-7",
+  "h-8": "h-8",
+  "h-9": "h-9",
+  "h-10": "h-10",
+  "h-11": "h-11",
+  "h-12": "h-12",
+  "h-14": "h-14",
+  "h-16": "h-16",
+  "h-20": "h-20",
+  "h-24": "h-24",
+  "h-28": "h-28",
+  "h-32": "h-32",
+  "h-36": "h-36",
+  "h-40": "h-40",
+  "h-44": "h-44",
+  "h-48": "h-48",
+  "h-52": "h-52",
+  "h-56": "h-56",
+  "h-60": "h-60",
+  "h-64": "h-64",
+  "h-72": "h-72",
+  "h-80": "h-80",
+  "h-96": "h-96",
+  "h-fit": "h-fit",
+
+  /* =====================
+     MIN HEIGHT
+  ===================== */
+
+  "min-h-0": "min-h-0",
+  "min-h-full": "min-h-full",
+  "min-h-fit": "min-h-fit",
+
+  /* =====================
+     MAX HEIGHT
+  ===================== */
+
+  "max-h-0": "max-h-0",
+  "max-h-full": "max-h-full",
+  "max-h-screen": "max-h-screen",
+  "max-h-fit": "max-h-fit",
+
+    /* =====================
+     CUSTOM WIDTHS
+  ===================== */
+
+  "w-[1px]": "w-[1px]",
+  "w-[2px]": "w-[2px]",
+  "w-[4px]": "w-[4px]",
+  "w-[8px]": "w-[8px]",
+  "w-[12px]": "w-[12px]",
+  "w-[16px]": "w-[16px]",
+  "w-[20px]": "w-[20px]",
+  "w-[24px]": "w-[24px]",
+  "w-[32px]": "w-[32px]",
+  "w-[40px]": "w-[40px]",
+  "w-[48px]": "w-[48px]",
+  "w-[56px]": "w-[56px]",
+  "w-[64px]": "w-[64px]",
+  "w-[72px]": "w-[72px]",
+  "w-[80px]": "w-[80px]",
+  "w-[96px]": "w-[96px]",
+  "w-[120px]": "w-[120px]",
+  "w-[160px]": "w-[160px]",
+  "w-[200px]": "w-[200px]",
+  "w-[240px]": "w-[240px]",
+  "w-[280px]": "w-[280px]",
+  "w-[320px]": "w-[320px]",
+  "w-[360px]": "w-[360px]",
+  "w-[400px]": "w-[400px]",
+
+  /* =====================
+     CUSTOM HEIGHTS
+  ===================== */
+
+  "h-[1px]": "h-[1px]",
+  "h-[2px]": "h-[2px]",
+  "h-[4px]": "h-[4px]",
+  "h-[8px]": "h-[8px]",
+  "h-[12px]": "h-[12px]",
+  "h-[16px]": "h-[16px]",
+  "h-[20px]": "h-[20px]",
+  "h-[24px]": "h-[24px]",
+  "h-[32px]": "h-[32px]",
+  "h-[40px]": "h-[40px]",
+  "h-[48px]": "h-[48px]",
+  "h-[56px]": "h-[56px]",
+  "h-[64px]": "h-[64px]",
+  "h-[72px]": "h-[72px]",
+  "h-[80px]": "h-[80px]",
+  "h-[96px]": "h-[96px]",
+  "h-[120px]": "h-[120px]",
+  "h-[160px]": "h-[160px]",
+  "h-[200px]": "h-[200px]",
+  "h-[240px]": "h-[240px]",
+  "h-[280px]": "h-[280px]",
+  "h-[320px]": "h-[320px]",
+  "h-[360px]": "h-[360px]",
+  "h-[400px]": "h-[400px]",
+
+  /* =====================
+     CUSTOM MIN/MAX WIDTH
+  ===================== */
+
+  "min-w-[64px]": "min-w-[64px]",
+  "min-w-[120px]": "min-w-[120px]",
+  "min-w-[200px]": "min-w-[200px]",
+
+  "max-w-[120px]": "max-w-[120px]",
+  "max-w-[200px]": "max-w-[200px]",
+  "max-w-[320px]": "max-w-[320px]",
+  "max-w-[400px]": "max-w-[400px]",
+
+  /* =====================
+     CUSTOM MIN/MAX HEIGHT
+  ===================== */
+
+  "min-h-[64px]": "min-h-[64px]",
+  "min-h-[120px]": "min-h-[120px]",
+  "min-h-[200px]": "min-h-[200px]",
+
+  "max-h-[64px]": "max-h-[64px]",
+  "max-h-[120px]": "max-h-[120px]",
+  "max-h-[200px]": "max-h-[200px]",
+  "max-h-[320px]": "max-h-[320px]",
+  "object-cover": "object-cover"
 };
 
 export function resolveClasses(classList?: string[]) {

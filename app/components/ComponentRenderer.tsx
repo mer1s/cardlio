@@ -7,7 +7,10 @@ type Props = {
   theme?: "light" | "dark";
   name: string;
   colFlex?: boolean,
-  flexGap?: number
+  flexGap?: number,
+  justify?: string,
+  align?: string
+  fill?: boolean
 };
 
 export default function ComponentRenderer({
@@ -17,12 +20,18 @@ export default function ComponentRenderer({
   theme = "dark",
   colFlex = false,
   flexGap = 0,
+  justify,
+  align,
+  fill,
 }: Props) {
   return (
     <div
       className={[
         "flex",
         flexGap &&`gap-${flexGap}`,
+        insideBlock && `${justify ? 'justify-' + justify : ""}`,
+        insideBlock && `${fill ? 'h-full w-full' : ""}`,
+        insideBlock && `${align ? 'items-' + align: ""}`,
         insideBlock ? colFlex && "flex-col" : "min-h-screen flex-col",
         !insideBlock ? theme === "dark"
           ? "bg-black text-white"
